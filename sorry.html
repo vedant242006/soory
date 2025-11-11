@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Sorry, Bestie 💕</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 30px;
+            padding: 50px 40px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            position: relative;
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            color: #764ba2;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .emoji {
+            font-size: 4em;
+            margin: 20px 0;
+            display: inline-block;
+            animation: rotate 3s infinite;
+        }
+
+        @keyframes rotate {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-15deg); }
+            75% { transform: rotate(15deg); }
+        }
+
+        .message {
+            font-size: 1.2em;
+            color: #333;
+            line-height: 1.8;
+            margin: 30px 0;
+            opacity: 0;
+            animation: slideIn 1s ease-in 0.5s forwards;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .reasons {
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .reason {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 15px 20px;
+            margin: 15px 0;
+            border-radius: 15px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: popIn 0.6s ease-in forwards;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .reason:nth-child(1) { animation-delay: 1s; }
+        .reason:nth-child(2) { animation-delay: 1.3s; }
+        .reason:nth-child(3) { animation-delay: 1.6s; }
+        .reason:nth-child(4) { animation-delay: 1.9s; }
+
+        @keyframes popIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .reason strong {
+            color: #764ba2;
+            font-size: 1.1em;
+        }
+
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2em;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(118, 75, 162, 0.4);
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(118, 75, 162, 0.6);
+        }
+
+        .hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .heart {
+            position: absolute;
+            font-size: 2em;
+            animation: float 6s infinite ease-in;
+            opacity: 0.7;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            50% {
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .final-message {
+            font-size: 1.3em;
+            color: #764ba2;
+            font-weight: bold;
+            margin-top: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            .message {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hearts" id="hearts"></div>
+    
+    <div class="container">
+        <h1>Hey Bestie... 💕</h1>
+        <div class="emoji">🥺</div>
+        
+        <div class="message">
+            I know I messed up, and I'm really sorry for making you angry. 
+            You mean the world to me, and I hate seeing you upset, especially because of me.
+        </div>
+
+        <div class="reasons">
+            <div class="reason">
+                <strong>💖 You're irreplaceable:</strong> Our friendship is one of the best things in my life, and I don't want to lose it over something silly.
+            </div>
+            <div class="reason">
+                <strong>🌟 I value you:</strong> Your happiness matters to me more than being right. I'm truly sorry for hurting you.
+            </div>
+            <div class="reason">
+                <strong>🤗 I promise:</strong> I'll try my best to be more understanding and not repeat the same mistake.
+            </div>
+            <div class="reason">
+                <strong>✨ You're amazing:</strong> You're the kindest, funniest, and most awesome friend anyone could ask for!
+            </div>
+        </div>
+
+        <button onclick="showForgiveness()">Can you forgive me? 🥺</button>
+        
+        <div id="finalMessage" class="final-message hidden">
+            Thank you for being the best friend ever! 💕<br>
+            Let's make more happy memories together! 🎉
+        </div>
+    </div>
+
+    <script>
+        // Create floating hearts
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.innerHTML = '💕';
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.animationDuration = (Math.random() * 3 + 4) + 's';
+            heart.style.animationDelay = Math.random() * 2 + 's';
+            document.getElementById('hearts').appendChild(heart);
+            
+            setTimeout(() => heart.remove(), 8000);
+        }
+
+        // Create hearts periodically
+        setInterval(createHeart, 800);
+
+        // Show forgiveness message
+        function showForgiveness() {
+            const finalMsg = document.getElementById('finalMessage');
+            finalMsg.classList.remove('hidden');
+            
+            // Create celebration hearts
+            for(let i = 0; i < 30; i++) {
+                setTimeout(createHeart, i * 100);
+            }
+            
+            // Change button
+            event.target.innerHTML = 'Yay! 🎉 Best Friends Forever!';
+            event.target.style.background = 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)';
+        }
+    </script>
+</body>
+</html>
