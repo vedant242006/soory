@@ -173,6 +173,33 @@
             }
         }
 
+        .icecream-cone {
+            font-size: 5em;
+            margin: 30px 0;
+            display: inline-block;
+            animation: swing 2s ease-in-out infinite;
+        }
+
+        @keyframes swing {
+            0%, 100% { transform: rotate(-5deg); }
+            50% { transform: rotate(5deg); }
+        }
+
+        .treat-section {
+            background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+            padding: 25px;
+            border-radius: 20px;
+            margin: 30px 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            animation: slideIn 1s ease-in 2.5s forwards;
+            opacity: 0;
+        }
+
+        .treat-section h2 {
+            color: #d63031;
+            margin-bottom: 15px;
+        }
+
         .hidden {
             display: none;
         }
@@ -228,6 +255,15 @@
             <div class="reason">
                 <strong>✨ You're amazing:</strong> You're the kindest, funniest, and most awesome friend anyone could ask for!
             </div>
+        </div>
+
+        <div class="treat-section">
+            <div class="icecream-cone">🍦</div>
+            <h2>Let Me Make It Up To You!</h2>
+            <p style="font-size: 1.1em; color: #2d3436;">
+                How about I treat you to your favorite ice cream? 🍨<br>
+                My treat! Let's grab ice cream together and forget about this fight! 💕
+            </p>
         </div>
 
         <button onclick="showForgiveness()">Can you forgive me? 🥺</button>
